@@ -1,3 +1,3 @@
+//HELLO WORLD
 //This is a test of gitHub with Processing
-//Does this update in real time?
-//Saving
+//Here is an update of my code
