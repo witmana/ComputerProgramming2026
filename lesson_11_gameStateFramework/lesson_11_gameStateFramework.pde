@@ -4,6 +4,7 @@
 //We will have three different states; START, GAME, and END
 //DECLARE variable to control game states
 String gameState = "START";
+int score;
 
 void setup(){
   size(400,400);
