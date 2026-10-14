@@ -46,17 +46,17 @@ void drawStart() {
   background(0);
   textAlign(CENTER);
   text("welcome to a fun game", width/2, height/2);
-  text("click to start", width/2, height/2+50);
+  text("press a key to start", width/2, height/2+50);
 
   //if mouse if pressed, transition to "GAME" state
-  if (mousePressed) {
+  if (keyPressed) {
     gameState = "GAME";
   }
 }
 
 void drawGame() {
   background(0);
-  text("THIS IS THE GAME", width/2, height/2);
+  text("SCORE: " + score, width/2, 20);
 
   //increment the position by the velocity
   y += vy;
@@ -86,9 +86,19 @@ void drawGame() {
 
 void drawEnd() {
   background(0);
-  text("YOU WON THE GAME", width/2, height/2);
+  text("YOU POPPED " + score + " BALLOONS", width/2, height/2);
   
   if(mousePressed){
     gameState = "START";
+    resetGame();
   }
+}
+
+//This function will assign initial values for all our variables
+void resetGame(){
+  score = 0;
+  x = width/2;
+  y = height;
+  r = 25;
+  vy = -1;
 }
